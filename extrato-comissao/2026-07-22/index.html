@@ -47,7 +47,7 @@
   .card-titulo svg { width: 16px; height: 16px; color: #0D9CA4; flex-shrink: 0; }
   .resumo-dia {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 14px;
     margin-bottom: 24px;
   }
@@ -75,27 +75,6 @@
   .barra-trilha { flex: 1; height: 14px; background: #243033; border-radius: 7px; overflow: hidden; }
   .barra-preenchida { height: 100%; background: #0D9CA4; border-radius: 7px; transition: width 1s cubic-bezier(0.22, 1, 0.36, 1); }
   .barra-valor { width: 90px; font-size: 12px; color: #8FA3A6; text-align: right; flex-shrink: 0; white-space: nowrap; }
-  table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 12px; }
-  thead th {
-    background: #0B2427;
-    color: #0D9CA4;
-    text-align: left;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 10px 14px;
-    border-bottom: 1px solid #243033;
-  }
-  thead th:last-child { text-align: center; }
-  tbody td {
-    padding: 10px 14px;
-    font-size: 13px;
-    border-bottom: 1px solid #243033;
-    transition: background-color 0.15s ease;
-  }
-  tbody td:last-child { text-align: center; }
-  tbody tr:nth-child(even) td { background: #172124; }
-  tbody tr:hover td { background: #0B2427; }
   .tabela-vazia { text-align: center; color: #8FA3A6; padding: 20px 14px !important; }
   .grafico-linha-wrap { width: 100%; }
   .grafico-linha-wrap svg { display: block; width: 100%; height: auto; overflow: visible; }
@@ -116,6 +95,15 @@
     </header>
 
     <div class="resumo-dia">
+      <div class="tile-destaque teal">
+        <div class="tile-linha-valor">
+          <svg class="tile-icone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <div class="valor">0</div>
+        </div>
+        <div class="rotulo">Extratos Processados</div>
+      </div>
       <div class="tile-destaque teal">
         <div class="tile-linha-valor">
           <svg class="tile-icone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -169,20 +157,6 @@
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-titulo">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-        </svg>
-        Extratos do Dia
-      </div>
-      <table>
-        <thead><tr><th>Corretora</th><th>Data Emissão</th><th>Data Pagamento</th><th>Qtd. Baixas</th></tr></thead>
-        <tbody>
-          <tr><td colspan="4" class="tabela-vazia">Nenhum extrato de comissão baixado neste dia.</td></tr>
-        </tbody>
-      </table>
-    </div>
 
     <footer>Dashboard gerado automaticamente pela automação RC4VC &mdash; Akad.</footer>
   </div>
