@@ -45,6 +45,15 @@
     margin-bottom: 20px;
   }
   .card-titulo svg { width: 16px; height: 16px; color: #0D9CA4; flex-shrink: 0; }
+  .card-titulo-total {
+    margin-left: auto;
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FE7210;
+    white-space: nowrap;
+  }
   .resumo-dia {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -193,6 +202,7 @@
           <path d="M15 7h5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         Valor Líquido por Dia &mdash; Mês Corrente
+        <span class="card-titulo-total">Total Julho/2026: R$ 10.933,74</span>
       </div>
       <div class="grafico-linha-wrap">
         <svg id="grafico-valor" viewBox="0 0 640 220" width="100%" height="220">
