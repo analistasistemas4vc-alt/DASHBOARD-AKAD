@@ -45,15 +45,23 @@
     margin-bottom: 20px;
   }
   .card-titulo svg { width: 16px; height: 16px; color: #0D9CA4; flex-shrink: 0; }
-  .card-titulo-total {
+  .card-titulo-totais {
     margin-left: auto;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .card-titulo-total {
     text-transform: none;
     letter-spacing: normal;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
-    color: #FE7210;
     white-space: nowrap;
   }
+  .card-titulo-total .rotulo { font-weight: 400; color: #8FA3A6; margin-right: 4px; }
+  .card-titulo-total.premio { color: #0D9CA4; }
+  .card-titulo-total.comissao { color: #FE7210; }
   .resumo-dia {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -202,7 +210,10 @@
           <path d="M15 7h5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         Valor Líquido por Dia &mdash; Mês Corrente
-        <span class="card-titulo-total">Total Julho/2026: R$ 10.933,74</span>
+        <span class="card-titulo-totais">
+          <span class="card-titulo-total premio"><span class="rotulo">Prêmio Líquido Julho/2026:</span>R$ 62.702,22</span>
+          <span class="card-titulo-total comissao"><span class="rotulo">Comissão Julho/2026:</span>R$ 10.933,74</span>
+        </span>
       </div>
       <div class="grafico-linha-wrap">
         <svg id="grafico-valor" viewBox="0 0 640 220" width="100%" height="220">
