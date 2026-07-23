@@ -45,28 +45,16 @@
     margin-bottom: 20px;
   }
   .card-titulo svg { width: 16px; height: 16px; color: #0D9CA4; flex-shrink: 0; }
-  .card-titulo-totais {
-    margin-left: auto;
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-  .card-titulo-total {
-    text-transform: none;
-    letter-spacing: normal;
-    font-size: 13px;
-    font-weight: 700;
-    white-space: nowrap;
-  }
-  .card-titulo-total .rotulo { font-weight: 400; color: #8FA3A6; margin-right: 4px; }
-  .card-titulo-total.premio { color: #0D9CA4; }
-  .card-titulo-total.comissao { color: #FE7210; }
   .resumo-dia {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 14px;
     margin-bottom: 24px;
+  }
+  .resumo-mes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
   .tile-destaque {
     border-radius: 16px;
@@ -210,10 +198,6 @@
           <path d="M15 7h5v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         Valor Líquido por Dia &mdash; Mês Corrente
-        <span class="card-titulo-totais">
-          <span class="card-titulo-total premio"><span class="rotulo">Prêmio Líquido Julho/2026:</span>R$ 62.702,22</span>
-          <span class="card-titulo-total comissao"><span class="rotulo">Comissão Julho/2026:</span>R$ 10.933,74</span>
-        </span>
       </div>
       <div class="grafico-linha-wrap">
         <svg id="grafico-valor" viewBox="0 0 640 220" width="100%" height="220">
@@ -224,6 +208,39 @@
       <text class="chart-valor" x="8.0" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="36.4" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="64.7" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="93.1" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="121.5" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="149.8" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="178.2" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="206.5" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="234.9" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="263.3" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="291.6" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="320.0" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="348.4" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="376.7" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="405.1" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="433.5" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="461.8" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="490.2" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="518.5" y="170.0" text-anchor="middle">0</text><text class="chart-valor" x="546.9" y="127.9" text-anchor="middle">1.604,19</text><text class="chart-valor" x="575.3" y="16.0" text-anchor="middle">5.869,14</text><text class="chart-valor" x="603.6" y="170.0" text-anchor="middle">0</text><text class="chart-valor chart-valor-hoje" x="632.0" y="79.2" text-anchor="middle">3.460,41</text>
       <text class="chart-dia" x="8.0" y="194.0" text-anchor="end" transform="rotate(-45 8.0 194.0)">01/07</text><text class="chart-dia" x="36.4" y="194.0" text-anchor="end" transform="rotate(-45 36.4 194.0)">02/07</text><text class="chart-dia" x="64.7" y="194.0" text-anchor="end" transform="rotate(-45 64.7 194.0)">03/07</text><text class="chart-dia" x="93.1" y="194.0" text-anchor="end" transform="rotate(-45 93.1 194.0)">04/07</text><text class="chart-dia" x="121.5" y="194.0" text-anchor="end" transform="rotate(-45 121.5 194.0)">05/07</text><text class="chart-dia" x="149.8" y="194.0" text-anchor="end" transform="rotate(-45 149.8 194.0)">06/07</text><text class="chart-dia" x="178.2" y="194.0" text-anchor="end" transform="rotate(-45 178.2 194.0)">07/07</text><text class="chart-dia" x="206.5" y="194.0" text-anchor="end" transform="rotate(-45 206.5 194.0)">08/07</text><text class="chart-dia" x="234.9" y="194.0" text-anchor="end" transform="rotate(-45 234.9 194.0)">09/07</text><text class="chart-dia" x="263.3" y="194.0" text-anchor="end" transform="rotate(-45 263.3 194.0)">10/07</text><text class="chart-dia" x="291.6" y="194.0" text-anchor="end" transform="rotate(-45 291.6 194.0)">11/07</text><text class="chart-dia" x="320.0" y="194.0" text-anchor="end" transform="rotate(-45 320.0 194.0)">12/07</text><text class="chart-dia" x="348.4" y="194.0" text-anchor="end" transform="rotate(-45 348.4 194.0)">13/07</text><text class="chart-dia" x="376.7" y="194.0" text-anchor="end" transform="rotate(-45 376.7 194.0)">14/07</text><text class="chart-dia" x="405.1" y="194.0" text-anchor="end" transform="rotate(-45 405.1 194.0)">15/07</text><text class="chart-dia" x="433.5" y="194.0" text-anchor="end" transform="rotate(-45 433.5 194.0)">16/07</text><text class="chart-dia" x="461.8" y="194.0" text-anchor="end" transform="rotate(-45 461.8 194.0)">17/07</text><text class="chart-dia" x="490.2" y="194.0" text-anchor="end" transform="rotate(-45 490.2 194.0)">18/07</text><text class="chart-dia" x="518.5" y="194.0" text-anchor="end" transform="rotate(-45 518.5 194.0)">19/07</text><text class="chart-dia" x="546.9" y="194.0" text-anchor="end" transform="rotate(-45 546.9 194.0)">20/07</text><text class="chart-dia" x="575.3" y="194.0" text-anchor="end" transform="rotate(-45 575.3 194.0)">21/07</text><text class="chart-dia" x="603.6" y="194.0" text-anchor="end" transform="rotate(-45 603.6 194.0)">22/07</text><text class="chart-dia" x="632.0" y="194.0" text-anchor="end" transform="rotate(-45 632.0 194.0)">23/07</text>
     </svg>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-titulo">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M15 2v5h5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        Resumo do Mês &mdash; Julho/2026
+      </div>
+      <div class="resumo-mes">
+        <div class="tile-destaque teal">
+          <div class="tile-linha-valor">
+            <svg class="tile-icone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <div class="valor">R$ 62.702,22</div>
+          </div>
+          <div class="rotulo">Prêmio Líquido Total no Mês</div>
+        </div>
+        <div class="tile-destaque laranja">
+          <div class="tile-linha-valor">
+            <svg class="tile-icone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M12 7v10M9.5 15.3c0 1.1 1.1 1.9 2.5 1.9s2.5-.8 2.5-1.9c0-1.2-1-1.6-2.5-2-1.5-.4-2.5-.8-2.5-2 0-1.1 1.1-1.9 2.5-1.9s2.5.8 2.5 1.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <div class="valor">R$ 10.933,74</div>
+          </div>
+          <div class="rotulo">Comissão Total no Mês</div>
+        </div>
       </div>
     </div>
 
