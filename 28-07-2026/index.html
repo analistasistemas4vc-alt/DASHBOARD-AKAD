@@ -559,7 +559,7 @@ footer {
 function filtrarSeg(seg) {
   document.querySelectorAll('[data-seg]').forEach(function(el) {
     var segs = el.getAttribute('data-seg').split(' ');
-    el.style.display = segs.indexOf(seg) !== -1 ? '' : 'none';
+    el.style.display = segs.indexOf(seg) !== -1 ? 'block' : 'none';
   });
   document.querySelectorAll('.filtro-seg button').forEach(function(btn) {
     btn.classList.toggle('ativo', btn.getAttribute('data-seg-btn') === seg);
