@@ -331,8 +331,10 @@ function render() {
 
   var doDia = totaisDoDia(estado.dia);
   document.getElementById('multi-rotulo').textContent = rotuloSelecao();
+  /* Sem toLowerCase: o rótulo pode ser uma lista de nomes próprios
+     ("Akad + Tokio"), e minusculizar escrevia o nome das seguradoras errado. */
   document.getElementById('resumo').textContent =
-    'Exibindo ' + rotuloSelecao().toLowerCase() + ' · mês ' + labelMes(mes)
+    'Exibindo ' + rotuloSelecao() + ' · mês ' + labelMes(mes)
     + ' · no dia ' + labelDia(estado.dia) + ': ' + plural(doDia[0], 'apólice', 'apólices')
     + ' e ' + plural(doDia[2], 'extrato', 'extratos') + '.';
 }
